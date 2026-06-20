@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Father's Day, Papa 💗</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#fff6fa;color:#5f4b53}
+.page{min-height:100vh;display:none;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
+.page.active{display:flex}
+h1,h2{color:#ff6ea9}
+.photo{max-width:320px;border:12px solid white;box-shadow:0 8px 20px rgba(0,0,0,.15);margin:15px;transform:rotate(-3deg)}
+.row{display:flex;flex-wrap:wrap;justify-content:center}
+button{padding:12px 24px;border:none;border-radius:999px;background:#ff91bd;color:white;cursor:pointer}
+</style>
+</head>
+<body>
+<section class="page active">
+<h1>Happy Father's Day, Papa 💗</h1>
+<p>From your little Pari 🎀</p>
+<button onclick="nextPage()">Open Storybook 📖</button>
+</section>
+
+<section class="page">
+<h2>Chapter One 👶</h2>
+<div class="row">
+<img class="photo" src="baby1.jpg">
+<img class="photo" src="baby2.jpg">
+</div>
+<p>Before I knew how to walk or talk, I already knew I was loved.</p>
+<button onclick="nextPage()">Next Page →</button>
+</section>
+
+<section class="page">
+<h2>Chapter Two 🌊</h2>
+<div class="row">
+<img class="photo" src="beach1.jpg">
+<img class="photo" src="family2.jpg">
+</div>
+<p>Every adventure became a treasure because you were there.</p>
+<button onclick="nextPage()">Next Page →</button>
+</section>
+
+<section class="page">
+<h2>Why Papa Is My Hero 🏆</h2>
+<p>🤍 Loving • ☀ Strong • 🌟 Patient • 🏡 Reliable • ✨ Supportive</p>
+<button onclick="nextPage()">Next Page →</button>
+</section>
+
+<section class="page">
+<h2>A Letter To Papa 💌</h2>
+<p>Thank you for every sacrifice, every lesson, every laugh, and every moment of love.<br><br>Love,<br>Your Pari 🎀</p>
+<button onclick="nextPage()">Next Page →</button>
+</section>
+
+<section class="page">
+<h2>Our Little Family 💕</h2>
+<img class="photo" src="family1.jpg">
+<p>Home isn't a place. It's the people who make you feel loved.</p>
+<button onclick="nextPage()">Next Page →</button>
+</section>
+
+<section class="page">
+<h2>Happy Father's Day ✨</h2>
+<p>No matter how old I grow, I'll always be your little Pari. 💗</p>
+</section>
+
+<script>
+let current=0;
+const pages=document.querySelectorAll('.page');
+function nextPage(){
+ pages[current].classList.remove('active');
+ current=Math.min(current+1,pages.length-1);
+ pages[current].classList.add('active');
+ window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
