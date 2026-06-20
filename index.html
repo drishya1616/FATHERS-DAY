@@ -1,79 +1,210 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Father's Day, Papa 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#fff6fa;color:#5f4b53}
-.page{min-height:100vh;display:none;flex-direction:column;justify-content:center;align-items:center;padding:30px;text-align:center}
-.page.active{display:flex}
-h1,h2{color:#ff6ea9}
-.photo{max-width:320px;border:12px solid white;box-shadow:0 8px 20px rgba(0,0,0,.15);margin:15px;transform:rotate(-3deg)}
-.row{display:flex;flex-wrap:wrap;justify-content:center}
-button{padding:12px 24px;border:none;border-radius:999px;background:#ff91bd;color:white;cursor:pointer}
+:root{
+--pink:#ffe4ee;
+--rose:#ff8fb8;
+--cream:#fffaf5;
+--gold:#d4b36a;
+--brown:#6d5d53;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Quicksand',sans-serif;
+background:linear-gradient(180deg,#fffaf5,#fff0f6);
+overflow:hidden;
+color:var(--brown);
+}
+
+.page{
+display:none;
+height:100vh;
+padding:40px;
+justify-content:center;
+align-items:center;
+text-align:center;
+flex-direction:column;
+}
+
+.page.active{
+display:flex;
+}
+
+h1,h2{
+font-family:'Cormorant Garamond',serif;
+color:#ff6ea9;
+}
+
+h1{
+font-size:4rem;
+}
+
+h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+p{
+max-width:700px;
+font-size:1.3rem;
+line-height:1.9;
+}
+
+.card{
+background:rgba(255,255,255,0.8);
+padding:50px;
+border-radius:30px;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:999px;
+background:var(--rose);
+color:white;
+font-size:1rem;
+cursor:pointer;
+}
+
+.star{
+position:fixed;
+font-size:1.8rem;
+opacity:.5;
+animation:float 12s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100px);
+}
+}
 </style>
 </head>
+
 <body>
-<section class="page active">
+
+<div class="star" style="left:10%">✨</div>
+<div class="star" style="left:25%;animation-delay:2s">🌸</div>
+<div class="star" style="left:50%;animation-delay:4s">🎀</div>
+<div class="star" style="left:70%;animation-delay:1s">💗</div>
+<div class="star" style="left:90%;animation-delay:5s">✨</div>
+
+<div class="page active">
+<div class="card">
 <h1>Happy Father's Day, Papa 💗</h1>
-<p>From your little Pari 🎀</p>
+<p>
+From your little Pari 🎀
+<br><br>
+A story told through love, gratitude and memories.
+</p>
 <button onclick="nextPage()">Open Storybook 📖</button>
-</section>
-
-<section class="page">
-<h2>Chapter One 👶</h2>
-<div class="row">
-<img class="photo" src="baby1.jpg">
-<img class="photo" src="baby2.jpg">
 </div>
-<p>Before I knew how to walk or talk, I already knew I was loved.</p>
-<button onclick="nextPage()">Next Page →</button>
-</section>
-
-<section class="page">
-<h2>Chapter Two 🌊</h2>
-<div class="row">
-<img class="photo" src="beach1.jpg">
-<img class="photo" src="family2.jpg">
 </div>
-<p>Every adventure became a treasure because you were there.</p>
-<button onclick="nextPage()">Next Page →</button>
-</section>
 
-<section class="page">
-<h2>Why Papa Is My Hero 🏆</h2>
-<p>🤍 Loving • ☀ Strong • 🌟 Patient • 🏡 Reliable • ✨ Supportive</p>
+<div class="page">
+<div class="card">
+<h2>Chapter I</h2>
+<p>
+The Man Who Held My Tiny Hand
+<br><br>
+Before I knew how to walk,
+before I knew how to talk,
+I already knew I was safe.
+Because I had you.
+</p>
 <button onclick="nextPage()">Next Page →</button>
-</section>
+</div>
+</div>
 
-<section class="page">
-<h2>A Letter To Papa 💌</h2>
-<p>Thank you for every sacrifice, every lesson, every laugh, and every moment of love.<br><br>Love,<br>Your Pari 🎀</p>
+<div class="page">
+<div class="card">
+<h2>Chapter II</h2>
+<p>
+The Hero I Never Had To Look For
+<br><br>
+Some people spend their lives searching for a hero.
+I never had to.
+Mine was there from the very beginning.
+</p>
 <button onclick="nextPage()">Next Page →</button>
-</section>
+</div>
+</div>
 
-<section class="page">
-<h2>Our Little Family 💕</h2>
-<img class="photo" src="family1.jpg">
-<p>Home isn't a place. It's the people who make you feel loved.</p>
+<div class="page">
+<div class="card">
+<h2>Chapter III</h2>
+<p>
+A Home Called Papa
+<br><br>
+Home isn't a place.
+It's a feeling.
+And for me, that feeling has always been you.
+</p>
 <button onclick="nextPage()">Next Page →</button>
-</section>
+</div>
+</div>
 
-<section class="page">
-<h2>Happy Father's Day ✨</h2>
-<p>No matter how old I grow, I'll always be your little Pari. 💗</p>
-</section>
+<div class="page">
+<div class="card">
+<h2>Chapter IV</h2>
+<p>
+Things I Don't Say Enough
+<br><br>
+Thank you for every sacrifice.
+Every lesson.
+Every laugh.
+Every time you believed in me.
+</p>
+<button onclick="nextPage()">Next Page →</button>
+</div>
+</div>
+
+<div class="page">
+<div class="card">
+<h2>Forever Your Pari 🎀</h2>
+<p>
+No matter how tall I grow,
+or where life takes me,
+I'll always be your little Pari.
+<br><br>
+Happy Father's Day, Papa 💗
+</p>
+</div>
+</div>
 
 <script>
-let current=0;
-const pages=document.querySelectorAll('.page');
+let current = 0;
+const pages = document.querySelectorAll('.page');
+
 function nextPage(){
- pages[current].classList.remove('active');
- current=Math.min(current+1,pages.length-1);
- pages[current].classList.add('active');
- window.scrollTo(0,0);
+pages[current].classList.remove('active');
+current++;
+if(current < pages.length){
+pages[current].classList.add('active');
+}
 }
 </script>
+
 </body>
 </html>
+```
